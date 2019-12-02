@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/GH-App/static/js/main.ae8d128d.chunk.js",
-    "main.js.map": "/GH-App/static/js/main.ae8d128d.chunk.js.map",
+    "main.js": "/GH-App/static/js/main.b21f91c6.chunk.js",
+    "main.js.map": "/GH-App/static/js/main.b21f91c6.chunk.js.map",
     "runtime-main.js": "/GH-App/static/js/runtime-main.94ca375a.js",
     "runtime-main.js.map": "/GH-App/static/js/runtime-main.94ca375a.js.map",
-    "static/js/2.a1b35a73.chunk.js": "/GH-App/static/js/2.a1b35a73.chunk.js",
-    "static/js/2.a1b35a73.chunk.js.map": "/GH-App/static/js/2.a1b35a73.chunk.js.map",
+    "static/js/2.897ba7f1.chunk.js": "/GH-App/static/js/2.897ba7f1.chunk.js",
+    "static/js/2.897ba7f1.chunk.js.map": "/GH-App/static/js/2.897ba7f1.chunk.js.map",
     "index.html": "/GH-App/index.html",
-    "precache-manifest.09fd9e3182cc1ce509bd8348503033ae.js": "/GH-App/precache-manifest.09fd9e3182cc1ce509bd8348503033ae.js",
+    "precache-manifest.b38a1dd880384143a622778caccd1f44.js": "/GH-App/precache-manifest.b38a1dd880384143a622778caccd1f44.js",
     "service-worker.js": "/GH-App/service-worker.js",
     "static/media/arrow.svg": "/GH-App/static/media/arrow.9c0790b9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.94ca375a.js",
-    "static/js/2.a1b35a73.chunk.js",
-    "static/js/main.ae8d128d.chunk.js"
+    "static/js/2.897ba7f1.chunk.js",
+    "static/js/main.b21f91c6.chunk.js"
   ]
 }
