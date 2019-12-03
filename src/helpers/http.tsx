@@ -11,3 +11,4 @@ axiosInstance.interceptors.response.use(
 );
 
 export const get = (endpoint: string, params = {}) => axiosInstance.get(endpoint, {params});
+export const post = (endpoint: string, params = {}) => axiosInstance.post(endpoint, params);

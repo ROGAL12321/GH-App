@@ -2,20 +2,33 @@ import React from 'react';
 import useGithub from 'hooks/useGithub';
 import { Link } from 'react-router-dom';
 
-import { H2 } from 'styles/typo';
+import { H2, H3 } from 'styles/typo';
 
-import { ListItem, ListItemContainer, Icon, Title, Description } from './Results.styled';
+import { ListItem, ListItemContainer, Description } from './Results.styled';
 import { ButtonContainer, PrimaryButton } from 'styles/buttons';
-import { IconBack } from 'styles/icons';
+import { Icon, IconBack } from 'styles/icons';
 
 import ArrowIcon from 'assets/arrow.svg';
 
+import { useQuery } from '@apollo/react-hooks';
+import { GET_REPOSITORIES } from 'queries'
+
 import { SEARCH_URL, DETAILS_URL } from 'consts/urls';
 
-const Results = ({ history }): JSX.Element => {
-  const { results } = useGithub();
+const Results = ({ history }): JSX.Element | null => {
+  const { searchName } = useGithub();
+  const { loading, error, data } = useQuery(GET_REPOSITORIES, {
+    variables: { name: searchName },
+  });
 
-  if(results.length === 0) history.push('/')
+  if(loading) return null;
+
+  if(error) {
+    history.push(SEARCH_URL);
+    return null;
+  }
+
+  const { search: { nodes } } = data
 
   return (
     <>
@@ -25,16 +38,16 @@ const Results = ({ history }): JSX.Element => {
       </H2>
       <ul>
         {
-          results.map(({ id, name, description, owner }) => (
+          nodes.map(({ id, name, primaryLanguage, owner, stargazers }) => (
             <ListItem key={id}>
-              <Icon src={owner.avatar_url} alt="Recipe"/>
+              <Icon src={owner.avatarUrl} alt="Owner"/>
               <ListItemContainer>
-                <Title>{name} ({owner.login})</Title>
+                <H3>{name} ({owner.login}) ({stargazers.totalCount} stars)</H3>
                 <Description>
-                  {description}
+                  {primaryLanguage && `#${primaryLanguage.name}`}
                 </Description>
                 <ButtonContainer position="right">
-                  <Link to={`${DETAILS_URL}/${id}`}>
+                  <Link to={`${DETAILS_URL}/${owner.login}/${name}`}>
                     <PrimaryButton> Show more </PrimaryButton>
                   </Link>
                 </ButtonContainer>

@@ -1,17 +1,15 @@
 import { createStore } from 'reusable';
 import { useState } from 'react';
-import { get } from 'helpers/http';
 
 const useGithub = createStore(() => {
-  const [results, setResults] = useState<any>([])
+  const [searchName, setSearchName] = useState<string>('')
 
-  const search = async (dataType: string, query: any): Promise<void> => {
-    const results = await get(dataType, query);
-    setResults(results);
+  const search = async (search: string) => {
+    setSearchName(search)
   }
 
   return {
-    results,
+    searchName,
     search
   }
 })

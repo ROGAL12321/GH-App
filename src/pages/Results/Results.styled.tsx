@@ -6,17 +6,6 @@ export const ListItem = styled.li`
   padding: 1em 0;
 `
 
-export const Icon = styled.img`
-  display: block;
-  margin: auto;
-  width: 50px;
-`
-
-export const Title = styled.h3`
-  font-size: ${props => props.theme.fontSizeLarge};
-  color: ${props => props.theme.fontColorMain};
-`
-
 export const Description = styled.p`
   font-size: ${props => props.theme.fontSizeSmall};
   color: #666;

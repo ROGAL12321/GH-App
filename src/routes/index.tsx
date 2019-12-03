@@ -1,11 +1,14 @@
 import React from 'react';
 import {
-	BrowserRouter,
+	HashRouter,
 	Route,
 	Switch
 } from 'react-router-dom';
 import { ReusableProvider } from 'reusable';
 import { ThemeProvider } from 'styled-components';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+import client from 'apollo'
 
 import theme from 'styles/theme';
 import Global from 'styles/global';
@@ -18,21 +21,24 @@ import Results from 'pages/Results';
 import Details from 'pages/Details';
 
 const Router: React.FC = () => (
-  <BrowserRouter>
+  <HashRouter>
     <ThemeProvider theme={theme}>
       <ReusableProvider>
-        <Header />
+        <ApolloProvider client={client}>
+          <Header />
           <Layout>
             <Switch>
               <Route exact path="/" component={Search} />
               <Route path="/results" component={Results} />
-              <Route path="/details/:id" component={Details} />
+              <Route path="/details/:owner/:name" component={Details} />
+              <Route path="/:code" component={Search} />
             </Switch>
           </Layout>
-        <Global />
+          <Global />
+        </ApolloProvider>
       </ReusableProvider>
     </ThemeProvider>
-  </BrowserRouter>
+  </HashRouter>
 )
 
 export default Router;
