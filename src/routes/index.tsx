@@ -12,9 +12,8 @@ import client from 'apollo'
 
 import theme from 'styles/theme';
 import Global from 'styles/global';
-import Layout from 'styles/layout';
 
-import Header from 'common/Header';
+import MainLayout from 'layouts/main'
 
 import Search from 'pages/Search';
 import Results from 'pages/Results';
@@ -25,15 +24,14 @@ const Router: React.FC = () => (
     <ThemeProvider theme={theme}>
       <ReusableProvider>
         <ApolloProvider client={client}>
-          <Header />
-          <Layout>
+          <MainLayout>
             <Switch>
               <Route exact path="/" component={Search} />
               <Route path="/results" component={Results} />
               <Route path="/details/:owner/:name" component={Details} />
               <Route path="/:code" component={Search} />
             </Switch>
-          </Layout>
+          </MainLayout>
           <Global />
         </ApolloProvider>
       </ReusableProvider>

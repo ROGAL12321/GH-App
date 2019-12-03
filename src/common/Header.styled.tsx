@@ -5,7 +5,7 @@ export const Header = styled.header`
   font-size: ${props => props.theme.fontSizeLarge};
   min-height: 64px;
   box-sizing: border-box;
-  padding: 1.25em;
+  padding: 1.25em 0;
 `
 
 export const HeaderContainer = styled.div`
