@@ -1,6 +1,7 @@
 import React from 'react';
 import useGithub from 'hooks/useGithub';
 import { Link } from 'react-router-dom';
+import { RouteComponentProps } from "react-router-dom";
 
 import { H2, H3 } from 'styles/typo';
 
@@ -15,7 +16,7 @@ import { GET_REPOSITORIES } from 'queries'
 
 import { SEARCH_URL, DETAILS_URL } from 'consts/urls';
 
-const Results = ({ history }): JSX.Element | null => {
+const Results: React.FC<RouteComponentProps> = ({ history }): JSX.Element | null => {
   const { searchName } = useGithub();
   const { loading, error, data } = useQuery(GET_REPOSITORIES, {
     variables: { name: searchName },

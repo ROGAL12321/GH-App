@@ -1,12 +1,18 @@
 import ApolloClient from 'apollo-boost';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-const client = new ApolloClient({
-  uri: 'https://api.github.com/graphql',
-  headers: {
-    Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
-  },
-  cache: new InMemoryCache()
-});
+const createClient = (token: string) => {
+  if(!token) {
+    return null;
+  }
 
-export default client
+  return new ApolloClient({
+    uri: 'https://api.github.com/graphql',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    cache: new InMemoryCache()
+  });
+}
+
+export default createClient

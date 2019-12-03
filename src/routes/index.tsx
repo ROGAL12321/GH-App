@@ -1,39 +1,23 @@
 import React from 'react';
-import {
-	HashRouter,
-	Route,
-	Switch
-} from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { ReusableProvider } from 'reusable';
 import { ThemeProvider } from 'styled-components';
-import { ApolloProvider } from '@apollo/react-hooks';
-
-import client from 'apollo'
 
 import theme from 'styles/theme';
 import Global from 'styles/global';
 
 import MainLayout from 'layouts/main'
 
-import Search from 'pages/Search';
-import Results from 'pages/Results';
-import Details from 'pages/Details';
+import App from 'pages/App';
 
 const Router: React.FC = () => (
   <HashRouter>
     <ThemeProvider theme={theme}>
       <ReusableProvider>
-        <ApolloProvider client={client}>
-          <MainLayout>
-            <Switch>
-              <Route exact path="/" component={Search} />
-              <Route path="/results" component={Results} />
-              <Route path="/details/:owner/:name" component={Details} />
-              <Route path="/:code" component={Search} />
-            </Switch>
-          </MainLayout>
-          <Global />
-        </ApolloProvider>
+        <MainLayout>
+          <App />
+        </MainLayout>
+        <Global />
       </ReusableProvider>
     </ThemeProvider>
   </HashRouter>

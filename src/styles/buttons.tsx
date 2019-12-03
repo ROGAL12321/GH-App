@@ -5,6 +5,7 @@ interface IProps {
 }
 
 export const ButtonContainer = styled.div`
+  margin: 1em 1.5em;
   text-align: ${(props: IProps) => props.position || 'center'};
 `
 
@@ -20,5 +21,4 @@ export const PrimaryButton = styled.button`
   font-size: ${props => props.theme.fontSizeSmall};
   padding: 6px 1em;
   font-weight: ${props => props.theme.fontWeightBold};
-  margin: 1em 1.5em;
 `
