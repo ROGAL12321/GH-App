@@ -6,6 +6,7 @@ import Search from 'pages/Search';
 import Results from 'pages/Results';
 import Details from 'pages/Details';
 
+import { Box } from 'rebass';
 import { PrimaryButton, ButtonContainer } from 'styles/buttons';
 import useGithub from 'hooks/useGithub';
 
@@ -34,9 +35,11 @@ const App: React.FC = (): JSX.Element => {
   return (
     <>
     {errors.cors &&  <H2 centered>Make sure you have CORS enabled in your browser</H2> }
-    <ButtonContainer>
-      <PrimaryButton disabled={errors.cors} onClick={authorize}> Login </PrimaryButton>
-    </ButtonContainer>
+    <Box mt={3}>
+      <ButtonContainer>
+        <PrimaryButton disabled={errors.cors} onClick={authorize}> Login </PrimaryButton>
+      </ButtonContainer>
+    </Box>
     </>
   )
 }
