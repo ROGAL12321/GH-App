@@ -1,15 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f555ced9bb2637a8d208955ad3fc388",
+    "revision": "fa0be71f3b803ff0502a7f75d104ba68",
     "url": "/GH-App/index.html"
   },
   {
-    "revision": "024e82f0082527468e15",
-    "url": "/GH-App/static/js/2.4d34c6e5.chunk.js"
+    "revision": "5ebd8aff8f24c41bdd7d",
+    "url": "/GH-App/static/css/2.c99ed502.chunk.css"
   },
   {
-    "revision": "8ff1a14cda8f751c3252",
-    "url": "/GH-App/static/js/main.3b66b7ec.chunk.js"
+    "revision": "5ebd8aff8f24c41bdd7d",
+    "url": "/GH-App/static/js/2.8f163856.chunk.js"
+  },
+  {
+    "revision": "3f84f418677b7502bcd8",
+    "url": "/GH-App/static/js/main.3028f3a9.chunk.js"
   },
   {
     "revision": "3b697825dd2cb80d9a60",
