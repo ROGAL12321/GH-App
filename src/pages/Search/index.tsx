@@ -18,17 +18,19 @@ const Search: React.FC<RouteComponentProps> = ({ history, match }): JSX.Element 
     search(formState.values.query).then(() => history.push(RESULTS_URL))
   }
 
+  const { values: { query } } = formState;
+
   return (
     <>
       <H2> Github Search </H2>
-        <form onSubmit={onSubmit}>
-          <InputRow>
-            <Label> Repo name </Label>
-            <Input {...text('query')} required />
-          </InputRow>
-          <ButtonContainer>
-            <PrimaryButton type="submit"> Search </PrimaryButton>
-          </ButtonContainer>
+      <form onSubmit={onSubmit}>
+        <InputRow>
+          <Label> Repository name </Label>
+          <Input {...text('query')} required />
+        </InputRow>
+        <ButtonContainer>
+          <PrimaryButton disabled={!query} type="submit"> Search </PrimaryButton>
+        </ButtonContainer>
       </form>
     </>
   )

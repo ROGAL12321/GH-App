@@ -9,6 +9,7 @@ export const GET_REPOSITORIES = gql`
           ... on Repository {
             id
             name
+            description
             stargazers {
               totalCount
             }

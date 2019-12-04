@@ -4,11 +4,12 @@ export const ListItem = styled.li`
   text-decoration: none;
   display: flex;
   padding: 1em 0;
+  border-bottom: 1px solid #E0E0E0;
 `
 
 export const Description = styled.p`
   font-size: ${props => props.theme.fontSizeSmall};
-  color: #666;
+  color: ${props => props.theme.fontColorThird};
   font-weight:  ${props => props.theme.fontWeightMedium};
 `
 

@@ -9,7 +9,7 @@ import { H1 } from 'styles/typo';
 import { PrimaryButton } from 'styles/buttons';
 
 const HeaderComponent = (): JSX.Element => {
-  const { token, logout }  = useGithub();
+  const { apolloClient, logout }  = useGithub();
   return (
     <Header>
       <Container>
@@ -18,7 +18,7 @@ const HeaderComponent = (): JSX.Element => {
             <H1>Github App</H1>
           </Link>
 
-          {token && <PrimaryButton onClick={logout}>Logout</PrimaryButton>}
+          {apolloClient && <PrimaryButton onClick={logout}>Logout</PrimaryButton>}
         </HeaderContainer>
       </Container>
     </Header>

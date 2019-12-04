@@ -10,7 +10,7 @@ import MainLayout from 'layouts/main'
 
 import App from 'pages/App';
 
-const Router: React.FC = () => (
+const Router: React.FC = (): JSX.Element => (
   <HashRouter>
     <ThemeProvider theme={theme}>
       <ReusableProvider>

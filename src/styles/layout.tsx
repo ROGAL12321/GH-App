@@ -7,7 +7,7 @@ const Layout = styled.div`
     0 1px 10px 0 rgba(0,0,0,.12);
   color: ${props => props.theme.fontColorMain};
   padding: 1.5em;
-  max-width: 1024px;
+  max-width: ${props => props.theme.siteWidth};
   box-sizing: border-box;
   margin: 40px auto;
   background: ${props => props.theme.fontColorSecondary};
