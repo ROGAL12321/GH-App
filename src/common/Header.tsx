@@ -8,7 +8,7 @@ import useGithub from 'hooks/useGithub';
 import { H1 } from 'styles/typo';
 import { PrimaryButton } from 'styles/buttons';
 
-const HeaderComponent = (): JSX.Element => {
+const HeaderComponent: React.FC = (): JSX.Element => {
   const { apolloClient, logout }  = useGithub();
   return (
     <Header>

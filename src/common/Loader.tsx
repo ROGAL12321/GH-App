@@ -6,7 +6,7 @@ const LoaderWrapper = styled.div`
   text-align: center;
 `
 
-const LoaderComponent = () => (
+const LoaderComponent: React.FC = (): JSX.Element => (
   <LoaderWrapper>
     <Loader
       type="Puff"

@@ -17,7 +17,7 @@ import { RESULTS_URL, SEARCH_URL } from 'consts/urls';
 
 import { REPOSITORY_INFO } from 'queries'
 
-const DetailComponent = ({ history, match }): JSX.Element | null => {
+const DetailComponent: React.FC = ({ history, match }): JSX.Element | null => {
   const { loading, error, data } = useQuery(REPOSITORY_INFO, {
     variables: {
       name: match.params.name,
