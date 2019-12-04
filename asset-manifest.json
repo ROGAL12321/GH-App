@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/GH-App/static/js/main.3028f3a9.chunk.js",
-    "main.js.map": "/GH-App/static/js/main.3028f3a9.chunk.js.map",
+    "main.js": "/GH-App/static/js/main.9bfdc5f6.chunk.js",
+    "main.js.map": "/GH-App/static/js/main.9bfdc5f6.chunk.js.map",
     "runtime-main.js": "/GH-App/static/js/runtime-main.94ca375a.js",
     "runtime-main.js.map": "/GH-App/static/js/runtime-main.94ca375a.js.map",
     "static/css/2.c99ed502.chunk.css": "/GH-App/static/css/2.c99ed502.chunk.css",
-    "static/js/2.8f163856.chunk.js": "/GH-App/static/js/2.8f163856.chunk.js",
-    "static/js/2.8f163856.chunk.js.map": "/GH-App/static/js/2.8f163856.chunk.js.map",
+    "static/js/2.10e6e87b.chunk.js": "/GH-App/static/js/2.10e6e87b.chunk.js",
+    "static/js/2.10e6e87b.chunk.js.map": "/GH-App/static/js/2.10e6e87b.chunk.js.map",
     "index.html": "/GH-App/index.html",
-    "precache-manifest.01198766f8afb8c77844548ba2c45e84.js": "/GH-App/precache-manifest.01198766f8afb8c77844548ba2c45e84.js",
+    "precache-manifest.d825e6f39fea1db24046969f94300033.js": "/GH-App/precache-manifest.d825e6f39fea1db24046969f94300033.js",
     "service-worker.js": "/GH-App/service-worker.js",
     "static/css/2.c99ed502.chunk.css.map": "/GH-App/static/css/2.c99ed502.chunk.css.map",
     "static/media/arrow.svg": "/GH-App/static/media/arrow.9c0790b9.svg"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.94ca375a.js",
     "static/css/2.c99ed502.chunk.css",
-    "static/js/2.8f163856.chunk.js",
-    "static/js/main.3028f3a9.chunk.js"
+    "static/js/2.10e6e87b.chunk.js",
+    "static/js/main.9bfdc5f6.chunk.js"
   ]
 }
